@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Søren Lisby Schmidt – Freelance .NET Cloud Consultant</title>
+<meta name="description" content="Experienced software engineer for enterprise teams. C# .NET, Azure and Google Cloud.">
+<link rel="canonical" href="https://www.schm.dk/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.schm.dk/">
+<meta property="og:title" content="Søren Lisby Schmidt – Freelance .NET Cloud Consultant">
+<meta property="og:image" content="https://www.schm.dk/social-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Søren Lisby Schmidt, freelance .NET cloud consultant at SCHM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.schm.dk/social-banner.png">
+<meta property="og:description" content="Experienced software engineer for enterprise teams. C# .NET, Azure and Google Cloud.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4E5A'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23F4F6F3' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<script>
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4F6F3;
+    --ink: #17212B;
+    --muted: #5A6570;
+    --rule: #D6DCD6;
+    --accent: #1F4E5A;
+    --name-rest: var(--ink);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #121A21;
+      --ink: #E7ECE8;
+      --muted: #9AA6AE;
+      --rule: #2A3640;
+      --accent: #8CC3CF;
+      --name-rest: #FFFFFF;
+    }
+  }
+  :root[data-theme="light"] { color-scheme: light; }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #121A21; --ink: #E7ECE8; --muted: #9AA6AE; --rule: #2A3640;
+    --accent: #8CC3CF; --name-rest: #FFFFFF;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  a:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Header */
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  .mark {
+    font-weight: 800;
+    font-size: 1.125rem;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  /* Shared by the header and the footer so the two read as a pair. */
+  .imprint { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.15rem 0.6rem; min-width: 0; }
+  .imprint-meta { color: var(--muted); font-size: 0.875rem; min-width: 0; }
+  /* The toggle keeps its size; the brand line wraps instead. */
+  .nav { display: flex; align-items: center; gap: 1rem; flex: none; }
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem; height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .theme-toggle:hover { border-color: var(--muted); }
+  .theme-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .theme-toggle .i-sun { display: none; }
+  .is-dark .theme-toggle .i-sun { display: block; }
+  .is-dark .theme-toggle .i-moon { display: none; }
+
+  /* Hero */
+  .hero { padding: 4.5rem 0 4rem; }
+  .portrait {
+    display: block;
+    width: 7.5rem;
+    height: 7.5rem;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 0 2rem;
+    box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px var(--rule);
+  }
+  h1 {
+    font-size: clamp(2.75rem, 9vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+    margin: 0 0 1.5rem;
+  }
+  h1 > span { display: block; }
+  h1 .brand { white-space: nowrap; }
+  h1 .co {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  h1 .rest { color: var(--name-rest); }
+  .company {
+    margin: -0.5rem 0 1.75rem;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+  .company b { color: var(--accent); letter-spacing: 0.04em; }
+  .lede {
+    font-size: 1.3125rem;
+    line-height: 1.45;
+    max-width: 32rem;
+    margin: 0 0 2.25rem;
+  }
+  .lede b { font-weight: 700; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.35rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .btn.secondary { color: var(--accent); }
+  /* Fill on hover: brightness() barely showed on a transparent button. */
+  .btn:hover { background: var(--accent); color: var(--paper); }
+
+  /* Sections */
+  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+    font-weight: 700;
+  }
+  p { margin: 0 0 1rem; max-width: 38rem; }
+
+  .glance {
+    margin: 0;
+    padding-left: 1.2rem;
+    max-width: 38rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+  .glance li { color: var(--muted); }
+  .glance b { color: var(--ink); }
+
+  /* The one bold moment */
+  .big-quote { margin: 0 0 3rem; }
+  .big-quote blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.5rem, 8vw, 4.25rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+  }
+  .big-quote figcaption { margin-top: 1rem; color: var(--muted); font-size: 0.9375rem; }
+
+  .quotes { display: grid; gap: 2rem; }
+  .quotes figure { margin: 0; padding-left: 1.25rem; border-left: 3px solid var(--rule); }
+  .quotes blockquote {
+    margin: 0 0 0.5rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.45;
+  }
+  .quotes figcaption { color: var(--muted); font-size: 0.9375rem; }
+
+  footer {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  footer .mark { color: var(--ink); }
+
+  @media (max-width: 34rem) {
+    .hero { padding: 3rem 0 3rem; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) both; }
+    .hero > *:nth-child(2) { animation-delay: 0.08s; }
+    .hero > *:nth-child(3) { animation-delay: 0.16s; }
+    .hero > *:nth-child(4) { animation-delay: 0.24s; }
+    .hero > *:nth-child(5) { animation-delay: 0.32s; }
+    .hero > *:nth-child(6) { animation-delay: 0.40s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="imprint">
+        <span class="mark">SCHM</span>
+        <span class="imprint-meta">DK45816362</span>
+      </div>
+      <nav class="nav">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <img class="portrait" src="soren.jpg" width="410" height="410" alt="Portrait of Søren Lisby Schmidt">
+        <h1 aria-label="Søren Lisby Schmidt"><span>Søren Lisby</span><span><span class="brand"><span class="co">Schm</span><span class="rest">idt</span></span></span></h1>
+        <p class="company">Consulting as <b>SCHM</b></p>
+        <p class="lede">Freelance software engineer in Copenhagen with over <b>thirteen years</b> of enterprise experience. Modern backend engineering on <b>Azure</b> and <b>Google Cloud</b>, with <b>agentic AI</b> as an everyday tool. <b>C# .NET</b> is my bread and butter.</p>
+        <div class="actions">
+          <a class="btn secondary" href="mailto:info@schm.dk">Send e-mail</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/lisbyschmidt" rel="noopener">View LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/lisbyschmidt" rel="noopener">View GitHub</a>
+        </div>
+      </div>
+
+      <section aria-labelledby="said">
+        <h2 id="said">What clients say</h2>
+        <figure class="big-quote">
+          <blockquote>“We need more Søren.”</blockquote>
+          <figcaption>A comment often heard in client teams, as shared by their manager</figcaption>
+        </figure>
+        <div class="quotes">
+          <figure>
+            <blockquote>“Takes great responsibility for the product and is always one step ahead. You never have to remind him what is important, because he has already identified and solved it.”</blockquote>
+            <figcaption>Manager, enterprise client</figcaption>
+          </figure>
+          <figure>
+            <blockquote>“His understanding of clean architecture, design patterns and contract patterns is very solid. Without him, we wouldn't have completed a big project on a short timeline.”</blockquote>
+            <figcaption>Lead Machine Learning Engineer, enterprise client</figcaption>
+          </figure>
+          <figure>
+            <blockquote>“Good at striking a balance between complexity, quality and time to market, and speaks up early about issues.”</blockquote>
+            <figcaption>Product Owner, enterprise client</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="glance">
+        <h2 id="glance">At a glance</h2>
+        <ul class="glance">
+          <li><b>Sectors</b> — strong experience in financial services and retail.</li>
+          <li><b>Leadership</b> — experience as lead developer and line manager.</li>
+          <li><b>Credentials</b> — MSc in Computer Science and Engineering, and multiple Microsoft Azure certifications.</li>
+          <li><b>Approach</b> — a mature balance of pragmatism and perfectionism, and a sparring partner for technical and non-technical people alike.</li>
+          <li><b>Teams</b> — I prefer teams with room for real engineering over packed calendars, and occasionally heading out for a beer after work.</li>
+          <li><b>Languages</b> — Danish and English.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects">Previous projects?</h2>
+        <p>Epic and private. :) But check out the next section.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-h">
+        <h2 id="contact-h">Get in touch</h2>
+        <p>Need an experienced software engineer on your team? Send a short note about the project and timeline.</p>
+        <div class="actions">
+          <a class="btn secondary" href="mailto:info@schm.dk">Send e-mail</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/lisbyschmidt" rel="noopener">View LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/lisbyschmidt" rel="noopener">View GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="imprint">
+      <span class="mark">SCHM</span>
+      <span class="imprint-meta">DK45816362</span>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector('.theme-toggle');
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      function isDark() {
+        var t = root.getAttribute('data-theme');
+        return t ? t === 'dark' : mq.matches;
+      }
+      function sync() {
+        var dark = isDark();
+        root.classList.toggle('is-dark', dark);
+        btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      }
+      btn.addEventListener('click', function () {
+        var next = isDark() ? 'light' : 'dark';
+        if (next === (mq.matches ? 'dark' : 'light')) {
+          // Back in step with the OS: drop the override so the page follows it again.
+          root.removeAttribute('data-theme');
+          try { localStorage.removeItem('theme'); } catch (e) {}
+        } else {
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        }
+        sync();
+      });
+      if (mq.addEventListener) mq.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
+</body>
+</html>
