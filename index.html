@@ -30,7 +30,6 @@
     --muted: #5A6570;
     --rule: #D6DCD6;
     --accent: #1F4E5A;
-    --name-rest: var(--ink);
     --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
     --serif: "Newsreader", Georgia, "Times New Roman", serif;
     box-sizing: border-box;
@@ -45,14 +44,13 @@
       --muted: #9AA6AE;
       --rule: #2A3640;
       --accent: #8CC3CF;
-      --name-rest: #FFFFFF;
     }
   }
   :root[data-theme="light"] { color-scheme: light; }
   :root[data-theme="dark"] {
     color-scheme: dark;
     --paper: #121A21; --ink: #E7ECE8; --muted: #9AA6AE; --rule: #2A3640;
-    --accent: #8CC3CF; --name-rest: #FFFFFF;
+    --accent: #8CC3CF;
   }
   *, *::before, *::after { box-sizing: inherit; }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
@@ -138,7 +136,7 @@
     text-transform: uppercase;
     letter-spacing: -0.01em;
   }
-  h1 .rest { color: var(--name-rest); }
+  h1 .rest { color: var(--ink); }
   .company {
     margin: -0.5rem 0 1.75rem;
     color: var(--muted);
